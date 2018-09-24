@@ -1,11 +1,12 @@
-import model.Input
+import model.getOutput
 
 class CustomerCare {
-    fun withInput(input: String) {
+    fun shortestDistanceFromSilkDorbtoHallitharam(inputData: String): String {
+        val naturalLanguageProcessor = NaturalLanguageProcessor()
 
-    }
-
-    fun output(): String {
-        return ""
+        return naturalLanguageProcessor.getStatement(
+                getOutput(
+                        naturalLanguageProcessor.parse(inputData)
+                ))
     }
 }

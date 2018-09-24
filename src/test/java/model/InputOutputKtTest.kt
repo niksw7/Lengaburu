@@ -1,15 +1,13 @@
 package model
 
+import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Test
-
-import org.junit.jupiter.api.Assertions.*
 
 internal class InputOutputKtTest {
 
     @Test
     fun calculateSpeed() {
-        val (vehicle, speed) = calculateSpeed(Vehicle.BIKE, Weather.SUNNY, Orbit.ORBIT1, 100)
-        assertEquals(Vehicle.BIKE, vehicle)
+        val speed = Vehicle.BIKE.calculateAverageSpeed(Weather.SUNNY, Orbit.ORBIT1, 100)
         assertEquals(8.695652f, speed)
     }
 

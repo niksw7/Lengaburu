@@ -7,13 +7,3 @@ enum class Weather(val craterChangeFactor: Float, val vehicles: List<Vehicle>) {
     RAINY(1f / 20, listOf(TUKTUK, CAR)),
     WINDY(0f, listOf(BIKE, CAR))
 }
-
-fun toWeather(weatherString: String): Weather {
-    return when (weatherString.toUpperCase()) {
-        "SUNNY" -> Weather.SUNNY
-        "RAINY" -> Weather.RAINY
-        else -> {
-            Weather.WINDY
-        }
-    }
-}
